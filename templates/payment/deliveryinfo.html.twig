@@ -1,0 +1,102 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Information de livraison{% endblock %}
+
+{% block body %}
+    <!-- Main Container -->
+    <div class="container-fluid">
+        <section class="main-container col2-right-layout bounceInUp animated">
+            <div class="main container">
+                <div class="row">
+                    <div class="col-main col-sm-9">
+                        <div class="page-title">
+                            <h1>Vos Informations de livraison</h1>
+                        </div>
+                        <ol class="one-page-checkout" id="checkoutSteps">
+
+                            <li id="opc-billing" class="section allow active">
+                                <div class="step-title"> <span class="number">2</span>
+                                    <h3 class="one_page_heading">Adresse de livraison</h3>
+                                    <!--<a href="#">Edit</a>-->
+                                </div>
+                                <div id="checkout-step-billing" class="step a-item">
+                                    <form id="co-billing-form" action="">
+                                        <fieldset class="group-select">
+                                            <ul>
+                                                <li id="billing-new-address-form">
+                                                    <fieldset>
+                                                        <legend>Vos informations</legend>
+                                                        <input type="hidden"  id="billing:address_id" />
+                                                        <ul>
+                                                            <li>
+                                                                <div class="customer-name">
+                                                                    <div class="input-box name-firstname">
+                                                                        <label for="billing:firstname"> Votre Nom<span class="required">*</span></label>
+                                                                        <br />
+                                                                        <input type="text" id="billing:firstname" name="" title="First Name" class="input-text form-control" />
+                                                                    </div>
+                                                                    <div class="input-box name-lastname">
+                                                                        <label for="billing:lastname"> Votre Prénom<span class="required">*</span> </label>
+                                                                        <br />
+                                                                        <input type="text" id="billing:lastname" name="" title="Last Name" class="input-text form-control" />
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="input-box">
+                                                                    <label for="billing:email">Votre email <span class="required">*</span></label>
+                                                                    <br />
+                                                                    <input type="text" name="billing[email]" id="billing:email" title="Email Address" class="input-text form-control" />
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <label for="billing:street1">Votre adresse<span class="required">*</span></label>
+                                                                <br />
+                                                                <input type="text" title="Street Address" name="" id="billing:street1  street1" class="input-text form-control" />
+                                                            </li>
+                                                            <br>
+                                                            <li>
+                                                                <input type="text" title="Street Address 2" name="" id="billing:street2 street2" class="input-text form-control" />
+                                                            </li>
+                                                            <br>
+                                                            <li>
+                                                                <div class="input-box">
+                                                                    <label for="billing:city">Ville <span class="required">*</span></label>
+                                                                    <br />
+                                                                    <input type="text" title="City" name="Ville" class="input-text form-control" id="billing:city" />
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="input-box">
+                                                                    <label for="billing:cp">Code Postale <span class="required">*</span></label>
+                                                                    <br />
+                                                                    <input type="text" title="CP" name="codepostale" class="input-text form-control" id="billing:cp" />
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="input-box">
+                                                                    <label for="billing:telephone">Telephone <span class="required">*</span></label>
+                                                                    <br />
+                                                                    <input type="text" name="" title="Telephone" class="input-text form-control" id="billing:telephone" />
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </fieldset>
+                                                </li>
+                                            </ul>
+                                            <br>
+                                            <button type="button" class="button continue" onClick="#"><span>Valider</span></button>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Main Container end -->
+
+{% endblock %}

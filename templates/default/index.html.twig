@@ -1,0 +1,289 @@
+{% extends "base.html.twig" %}
+{% block body %}
+
+   <body class="cms-index-index index" style= "background-color:white;">
+   <div id="page">
+   {% include'components/nav.html.twig' %}
+
+   <!-- Slider -->
+   <div id="thm-slideshow" class="thm-slideshow">
+      <div class="container">
+         <div id="rev_slider_4_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="classicslider1" style="margin:0px auto;background-color:white;padding:0px;margin-top:0px;margin-bottom:0px; box-shadow: inset 0px 0px 40px rgba(0,0,0,.2), 0 0 90px rgba(0,0,0,.8);">
+            <!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
+            <div id="rev_slider_4_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
+               <ul>
+                  <!-- SLIDE  -->
+                  <li>
+                     <!-- MAIN IMAGE -->
+                     <img src="{{ asset('images/cosmetics-1367779.jpg') }}" alt="">
+                     <!-- LAYERS -->
+
+                     <!-- LAYER NR. 1 -->
+                     <div class="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0"
+                          id="slide-16-layer-1"
+                          data-x="['center','center','center','center']"
+                          data-y="['middle','middle','middle','middle']"
+                          data-lineheight="['70','70','70','50']"
+                          data-width="none"
+                          data-height="none"
+                          data-whitespace="nowrap"
+
+
+                          data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;"
+                          data-transform_out="s:1000;"
+                          data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                          data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                          data-start="1000"
+                          data-splitin="chars"
+                          data-splitout="none"
+                          data-responsive_offset="on"
+
+                          style="z-index: 5;">Beauty VIP</div>
+
+                     <!-- LAYER NR. 2 -->
+                     <div class="tp-caption NotGeneric-SubTitle   tp-resizeme rs-parallaxlevel-0"
+                          id="slide-16-layer-4"
+                          data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                          data-y="['middle','middle','middle','middle']" data-voffset="['52','52','52','51']"
+                          data-width="none"
+                          data-height="none"
+                          data-whitespace="nowrap"
+                          data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                          data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                          data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+                          data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                          data-start="1500"
+                          data-splitin="none"
+                          data-splitout="none"
+                          data-responsive_offset="on"
+
+
+                          style="z-index: 6; white-space: nowrap;">Maquillage de luxe en vente privée</div>
+
+                     <!-- LAYER NR. 3 -->
+
+
+
+                     <div class="tp-caption NotGeneric-Icon   tp-resizeme rs-parallaxlevel-1"
+                          id="slide-17-layer-8"
+                          data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                          data-y="['middle','middle','middle','middle']" data-voffset="['120','100','100','100']"
+                          data-width="none"
+                          data-height="none"
+                          data-whitespace="nowrap"
+                          data-transform_idle="o:1;"
+                          data-style_hover="cursor:default;"
+
+                          data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1500;e:Power4.easeInOut;"
+                          data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                          data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+                          data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                          data-start="2000"
+                          data-splitin="none"
+                          data-splitout="none"
+                          data-responsive_offset="on"
+
+                             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                          style="z-index: 7; white-space: nowrap;"><a href="{{path('default_categorie',{'alias':'maquillage'})}}">Voir le maquillage</a></div>
+                              {% else %}
+
+
+                          style="z-index: 7; white-space: nowrap;"><a href="security/login_register">S'inscrire ou se connecter pour acheter</a></div>
+                            {% endif %}
+
+
+                     <!-- LAYER NR. 3 -->
+                  </li>
+
+                  <!-- SLIDE  -->
+                  <li data-index="rs-18" data-transition="zoomin" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="{{ asset('images/slide-img2.jpg') }}"  data-rotate="0"  data-saveperformance="off"  data-title="Ken Burns" data-description="">
+                     <!-- MAIN IMAGE -->
+                     <img src="{{ asset('images/pink-2791366.jpg') }}" alt="">
+                     <!-- LAYERS -->
+                     <!-- LAYER NR. 1 -->
+                     <div class="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0"
+                          id="slide-16-layer-1"
+                          data-x="['center','center','center','center']"
+                          data-y="['middle','middle','middle','middle']"
+                          data-lineheight="['70','70','70','50']"
+                          data-width="none"
+                          data-height="none"
+                          data-whitespace="nowrap"
+
+
+                          data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;"
+                          data-transform_out="s:1000;"
+                          data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                          data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                          data-start="1000"
+                          data-splitin="chars"
+                          data-splitout="none"
+                          data-responsive_offset="on"
+
+                          style="z-index: 5;">Beauty VIP</div>
+
+                     <!-- LAYER NR. 2 -->
+                     <div class="tp-caption NotGeneric-SubTitle   tp-resizeme rs-parallaxlevel-0"
+                          id="slide-16-layer-4"
+                          data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                          data-y="['middle','middle','middle','middle']" data-voffset="['52','52','52','51']"
+                          data-width="none"
+                          data-height="none"
+                          data-whitespace="nowrap"
+                          data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                          data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                          data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+                          data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                          data-start="1500"
+                          data-splitin="none"
+                          data-splitout="none"
+                          data-responsive_offset="on"
+
+
+                          style="z-index: 6; white-space: nowrap;">Parfums de luxe en vente privée</div>
+
+                     <!-- LAYER NR. 3 -->
+                     <div class="tp-caption NotGeneric-Icon   tp-resizeme rs-parallaxlevel-1"
+                          id="slide-17-layer-8"
+                          data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                          data-y="['middle','middle','middle','middle']" data-voffset="['120','100','100','100']"
+                          data-width="none"
+                          data-height="none"
+                          data-whitespace="nowrap"
+                          data-transform_idle="o:1;"
+                          data-style_hover="cursor:default;"
+
+                          data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1500;e:Power4.easeInOut;"
+                          data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                          data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+                          data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                          data-start="2000"
+                          data-splitin="none"
+                          data-splitout="none"
+                          data-responsive_offset="on"
+
+
+                             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                          style="z-index: 7; white-space: nowrap;"><a href="{{path('default_categorie',{'alias':'parfum'})}}">Voir les parfums</a></div>
+                     {% else %}
+
+
+                     style="z-index: 7; white-space: nowrap;"><a href="security/login_register">S'inscrire ou se connecter pour acheter</a></div>
+         {% endif %}
+                     <!-- LAYER NR. 3 -->
+
+
+                  </li>
+                  <!-- SLIDE  -->
+                  <!-- SLIDE  -->
+
+               </ul>
+               <div class="tp-static-layers"></div>
+               <div class="tp-bannertimer" style="height: 7px; background-color:white;"></div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- end Slider -->
+<br><br><br><br><br>
+{#   <!--Promotion Banner-->
+   <div class="offer-slider parallax parallax-2">
+      <div id="container-fluid ">
+         <h2 class="hideme" style="opacity: 1; margin-top: 40px;">SAVE THE DATE !</h2>
+         <div class="abouttext"></div>
+         <p class="hideme" style="opacity: 1;margin-left: 60px; margin-right: 60px">
+            <p class="text-parallax">Compte à rebours avant la sortie de notre nouvelle gamme d'androïdes animaux. <br> Votre animal de compagnie arrive bientôt. Tentez de remporter chien, chat ou même perroquet.<br> Pour les plus courageux, sécurisez votre maison avec votre T-rex, Vélociraptor ou Carnotaurus favoris !</p>
+         </p>
+      </div>
+         <div class="box-timer">
+            <div class="countbox_1 timer-grid"></div>
+         </div>
+
+
+   </div>
+   <br><br><br><br>
+   <!--Promotion Banner End-->#}
+
+
+
+   <!--Category-->
+
+
+   <div class="promo-section" >
+      <div class="container">
+         <div class="row">
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+            <a href="{{path('default_categorie',{'alias':'maquillage'})}}"><div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="promotion-banner"><img alt="promotion banner" src="{{ asset('images/makeupbrush.jpg') }}">
+                           <div id="text">
+                              <a href="{{path('default_categorie',{'alias':'maquillage'})}}"><span class="spot"></span>MAQUILLAGE</a>
+                           </div>
+
+               </div></a>
+
+            <a href="{{path('default_categorie',{'alias':'parfum'})}}"><div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="promotion-banner" ><img alt="promotion banner" src="{{ asset('images/parfums2.jpg') }}" id="promotion">
+               <div class="offer-slider ">
+                              <div id="text">
+                                 <a href="{{path('default_categorie',{'alias':'parfum'})}}"><span class="spot"></span>PARFUM</a>
+                              </div>
+               </div>
+            </div></a>
+
+            {% else %}
+               <a href="security/login_register"><div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="promotion-banner"><img alt="promotion banner" src="{{ asset('images/makeupbrush.jpg') }}">
+                     <div id="text">
+                        <a href="security/login_register"><span class="spot"></span>MAQUILLAGE</a>
+                     </div>
+
+                  </div></a>
+
+               <a href="security/login_register"><div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="promotion-banner" ><img alt="promotion banner" src="{{ asset('images/parfums2.jpg') }}" id="promotion">
+                     <div class="offer-slider ">
+                        <div id="text">
+                           <a href="security/login_register"><span class="spot"></span>PARFUM</a>
+                        </div>
+                     </div>
+                  </div></a>
+
+            {% endif %}
+         </div>
+      </div>
+   </div>
+
+   <!-- End of Category-->
+
+   <br><br>
+
+
+   <!--values -->
+
+   <div class="our-features-box">
+      <div class="container">
+         <ul>
+            <li>
+               <div class="feature-box" style="background-color:#C2A476;"> <span class=""><i class="fas fa-rocket"></i></span>
+                  <div class="content">
+                     <h3>LIVRAISON GRATUITE</h3>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="feature-box yellow_bg"> <span class=""><i class="fas fa-phone-alt"></i></span>
+                  <div class="content">
+                     <h3>SERVICE CLIENT 24/24h 7/7j</h3>
+                  </div>
+               </div>
+            </li>
+            <li class="last">
+               <div class="feature-box brown_bg" style="background-color:#C2A476;" > <span class=""><i class="fas fa-undo-alt"></i></span>
+                  <div class="content">
+                     <h3>RETOUR ET ECHANGE</h3>
+                  </div>
+               </div>
+            </li>
+         </ul>
+      </div>
+   </div>
+   </div>
+   <!-- en values -->
+   {% endblock %}

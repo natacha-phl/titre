@@ -1,0 +1,60 @@
+<footer>
+
+    <div class="container">
+{#        <div class="col-sm-12 col-xs-12 footer-logo"><img alt="Datson" src="images/logo.png"></div>#}
+    <address>
+        <i class="fa fa-map-marker"></i>Somewhere in the world<i class="fa fa-mobile"></i><span> +(33) 1 44 77 55 44 </span> <i class="fa fa-envelope"></i><span> contact@beautyvip.com</span>
+        <br>COPYRIGHT © 2021 BEAUTY VIP • POWERED BY NATACHA PHL
+    </address>
+    </div>
+    </div>
+
+</footer>
+<div id="mobile-menu">
+    <ul>
+
+
+        <li>
+            <div class="home"><a href="/"><i class="icon-home"></i>Accueil</a> </div>
+        </li>
+
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+        <li><a href="{{path('default_categorie',{'alias':'maquillage'})}}">Maquillage</a>
+        </li>
+
+        <li><a href="{{path('default_categorie',{'alias':'parfum'})}}">Parfum</a>
+        </li>
+
+        {% if is_granted('ROLE_ADMIN') %}
+
+        <li><a href="{{path('gestion_admin')}}">Gestion Administrateur</a>
+        </li>
+
+        {% endif %}
+
+        <li><a href="{{path('default_monCompte')}}">Mon compte</a>
+        </li>
+
+         <li><a href="{{path('panier')}}">Mon Panier</a>
+        </li>
+
+        <li><a href="{{ path('app_logout') }}">Deconnexion</a>
+        </li>
+
+        {% else %}
+
+        <li><a href="{{ path('user_create') }}">Inscription</a>
+        </li>
+
+         <li><a href="{{ path('app_login') }}">Connexion</a>
+        </li>
+
+        {% endif %}
+
+    </ul>
+
+    </div>
+</div>
+
+

@@ -1,0 +1,50 @@
+{% extends "base.html.twig" %}
+    {% block title %}Gestion Administrateur{% endblock %}
+
+{% block body %}
+
+
+<body class="customer-account-index customer-account  inner-page">
+<div id="page">
+    {% include'components/nav.html.twig' %}
+    {% for message in app.flashes('notice') %}
+    <div class="flash-notice alert alert-info">
+        {{ message }}
+    </div>
+    {% endfor %}
+    <!-- Main Container -->
+    <section class="main-container col1-layout bounceInUp animated">
+        <div class="main container">
+            <!-- <div class="account-login"> -->
+
+            <div class="admin-account row">
+                <div class="page-title">
+                    <h1>GESTION ADMINISTRATEUR</h1>
+
+
+                    <fieldset class="col2-set">
+
+                        <legend>Nouvel Article</legend>
+                        {{ form(form) }}
+
+                    </fieldset>
+
+
+                </div>
+                <br>
+                <br>
+
+                <div class ="buttons-set">
+                   <a href="https://dashboard.stripe.com/test/payments?status%5B%5D=successful"><button class="button create-account"  title="liste commandes" target="_blank"><span>Afficher la liste des commandes</span></button></a>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </section>
+    <!-- Main Container End -->
+    {% endblock %}
+

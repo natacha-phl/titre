@@ -1,0 +1,68 @@
+﻿{% extends "base.html.twig" %}
+{% block body %}
+
+  <body class="inner-page">
+  <div id="page">
+  {% include'components/nav.html.twig' %}
+
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <div class="container">
+    </div>
+  </div>
+  <!-- Main Container -->
+  <section class="main-container col1-layout wow bounceInUp animated">
+    <div class="main container">
+      <div class="col-main">
+        <div class="row">
+
+          <div class="product-view">
+
+            <div class="product-next-prev"> <a class="product-next" href="#"><span></span></a> <a class="product-prev" href="#"><span></span></a> </div>
+            <div class="product-essential">
+              <form action="#" method="post" id="product_addtocart_form">
+                <input name="form_key" value="6UbXroakyQlbfQzK" type="hidden">
+                <div class="product-img-box col-sm-4 col-xs-12">
+                  <div class="new-label new-top-left"> New </div>
+                  <div class="product-image">
+                    <div class="large-image">
+                      <a href="" title="{{product.name}}" class="product-image">
+                        <img src="{{ asset('uploads/images/' ~ product.featuredImage ) }}"
+                             alt="{{product.name}}" class="card-img-top">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-shop col-sm-8 col-xs-12">
+                  <div class="product-name">
+                    <h1>{{ product.name }}</h1>
+                  </div>
+                  <div class="price-block">
+                    <div class="price-box">
+                      <p class="special-price"> <span class="price-label">Special Price</span> <span id="product-price-48" class="price"> {{ product.pricedisplay}}€</span> </p>
+
+                    </div>
+                    <p class="availability in-stock pull-right"><span>En Stock</span></p>
+                  </div>
+
+                  <div class="short-description">
+                    <h2>{{ product. name }}</h2>
+                    <p>{{ product.description }}</p>
+                  </div>
+                  <div class="add-to-box">
+                    <div class="add-to-cart">
+                      <a href="{{ path('cart_add', {'id':product.id}) }}"><button onClick="" class="button btn-cart" title="Add to Cart" type="button"><span>Ajouter au panier</span></button></a>
+
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- Main Container End -->
+
+{% endblock %}

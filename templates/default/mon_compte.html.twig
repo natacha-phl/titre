@@ -1,0 +1,121 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Mon compte{% endblock %}
+
+{% block body %}
+
+
+<body class="customer-account-index customer-account inner-page">
+<div id="page">
+    {% include'components/nav.html.twig' %}
+
+    <!-- Main Container -->
+    <section class="main-container col2-right-layout container-fluid">
+        <div class="main container">
+            <div class="row">
+                <div class="col-main col-sm-10">
+                    <div class="page-title">
+                        <h1>Mes Informations</h1>
+                    </div>
+                    <div class="my-account">
+                        <div class="dashboard">
+                            <div class="welcome-msg"> <strong>Bonjour {{ app.user.firstname }} !</strong>
+                                <p>Depuis cet espace, retrouvez votre activité récente ainsi que le détail de vos informations.</p>
+                            </div>
+                            <div class="recent-orders">
+                                <div class="title-buttons"><strong>Historique des commandes :</strong> <a href="#">Tout voir </a> </div>
+                                <div class="table-responsive">
+                                    <table class="data-table" id="my-orders-table">
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col width="1">
+                                        <col width="1">
+                                        <col width="1">
+                                        <thead>
+                                        <tr class="first last">
+                                            <th>Commande #</th>
+                                            <th>Date</th>
+                                            <th>Destinataire</th>
+                                            <th><span class="nobr">Total de la commande</span></th>
+                                            <!-- <th>Statut</th> -->
+                                            <th>&nbsp;</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="first odd">
+                                            <td>AH-20052</td>
+                                            <td>19/09/20 </td>
+                                            <td>Edouard R.</td>
+                                            <td><span class="price">50,900.00 €</span></td>
+                                            <td class="a-center last"><span class="nobr"> <a href="#">Détail commande</a></span>
+                                        </tr>
+                                        <tr class="last even">
+                                            <td>AH-15020</td>
+                                            <td>30/10/18 </td>
+                                            <td>Edouard R.</td>
+                                            <td><span class="price">45,500.00 €</span></td>
+                                            <td class="a-center last"><span class="nobr"> <a href="#">Détail commande</a>
+                                       </span>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="box-account">
+                                <div class="mx-3 page-title">
+                                    <h2>Mon Compte</h2>
+                                </div>
+                                <div class="col2-set">
+                                    <div class="col-1">
+                                        <h5>Mes Coordonnées</h5>
+                                        <a href="#"></a><br>
+                                        <ul>
+                                            <li> Votre Nom : {{ app.user.lastname }}</li>
+                                            <li> Votre Prenom : {{ app.user.firstname }}</li>
+                                            <li> Votre email de contact : {{ app.user.email }}</li>
+                                            <li> Votre numero de telephone : {{ app.user.telephone }}</li>
+                                        </ul>
+
+
+                                            <a href="#">Modifier vos informations</a> </p>
+                                    </div>
+
+                                </div>
+                                <div class="col2-set">
+                                    <!-- <h4>Mes Adresses</h4> -->
+
+                                    <div class="col-1">
+                                        <h5> Adresse de Facturation</h5>
+                                        <ul>
+                                            <li>{{ app.user.adress }}</li>
+                                            <li>{{ app.user.postalcode }}</li>
+                                            <li>{{ app.user.city }}</li>
+                                            <a href="#">Modifier l'adresse</a>
+                                        </ul>
+                                    </div>
+                                    <div class="col-2">
+                                        <h5>Adresse de Livraison</h5>
+                                        <ul>
+                                            <li>{{ app.user.adress }}</li>
+                                            <li>{{ app.user.postalcode }}</li>
+                                            <li>{{ app.user.city }}</li>
+                                            <a href="#">Modifier l'adresse</a>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <aside class="col-right sidebar col-sm-3">
+
+                </aside>-->
+              </div>
+            </div>
+          </section>
+
+
+
+{% endblock %}

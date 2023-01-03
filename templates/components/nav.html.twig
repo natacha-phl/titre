@@ -1,0 +1,56 @@
+<!-- Header -->
+<header>
+    <div class="header-container">
+        <div class="header-top">
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        </div>
+    </div>
+</header>
+<!-- end header -->
+<!-- Navbar -->
+<nav>
+    <div class="container">
+
+        <div class="mm-toggle-wrap">
+            <div class="mm-toggle"><i class="fa fa-reorder"></i><span class="mm-label">Menu</span> </div>
+        </div>
+
+
+
+        <ul class="nav hidden-xs menu-item menu-item-left">
+
+            <li class="level0 parent drop-menu active"><a href="/"><span>Accueil</span></a>
+
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+            <li class="level0 parent drop-menu"><a href="{{path('default_categorie',{'alias':'maquillage'})}}"><span>Maquillage</span></a>
+            <li class="mega-menu"><a href="{{path('default_categorie',{'alias':'parfum'})}}" class="level-top"><span>Parfum</span></a></li>
+
+            {% if is_granted('ROLE_ADMIN') %}
+                <li class="nav-item"><a class="nav-link" href="{{path('gestion_admin')}}">Gestion Administrateur</a></li>
+            {% endif %}
+
+        </ul>
+
+        <ul class="nav hidden-xs menu-item menu-item-right">
+
+            <li class="nav-item"><a class="nav-link" href="{{path('default_monCompte')}}"><span>Mon compte</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="{{path('panier')}}"><span>Mon panier</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ path('app_logout') }}">Déconnexion</a></li>
+
+            {% else %}
+
+            <li class="nav-item"><a class="nav-link" href="{{ path('user_create') }}">Inscription</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ path('app_login') }}">Connexion</a></li>
+
+            {% endif %}
+
+        </ul>
+
+
+
+
+    </div>
+</nav>
+<!-- end nav -->

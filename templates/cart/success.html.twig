@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    {% block title %}{% endblock %}
+<body class="inner-page">
+
+<div id="page">
+    {% include'components/nav.html.twig' %}
+    <section class="main-container">
+        {% for message in app.flashes('notice') %}
+            <div class="flash-notice alert alert-success">
+                {{ message}}
+            </div>
+        {% endfor %}
+
+
+    </section>
+
+{% endblock %}

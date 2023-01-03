@@ -1,0 +1,89 @@
+{% extends "base.html.twig" %}
+    {% block title %}Connexion ou inscription{% endblock %}
+
+{% block body %}
+
+
+<body class="customer-account-login inner-page">
+<div id="page">
+   {% for message in app.flashes('notice') %}
+        <div class="flash-notice alert alert-info">
+            {{ message }}
+        </div>
+    {% endfor %}
+    <!-- Header -->
+
+
+    {% include'components/nav.html.twig' %}
+
+    <!-- Main Container -->
+    <section class="main-container col1-layout bounceInUp animated">
+        <div class="main container">
+            <!-- <div class="account-login"> -->
+            <div class="admin-account">
+
+
+                <fieldset class="col2-set">
+
+
+                    <div class="col-1 new-users">
+                        <div class="page-title">
+                            <h1>Inscription</h1>
+                        </div>
+                        <div class="content">
+
+                            {{ form(form) }}
+
+                        </div>
+                    </div>
+
+                    <div class="col-2 registered-users">
+                        <div class="page-title">
+                            <h1>Connexion</h1>
+                        </div>
+                        <div class="content">
+                            <form action="{{ path('app_login') }}" method="post">
+                                <div class="form-group">
+
+                                    <label for="inputEmail" class="form-text">Email</label>
+                                    <input type="email" name="email" id="inputEmail" class="form-control" required autofocus>
+                                    <label for="inputPassword">Mot de passe</label>
+                                    <input type="password" name="password" id="inputPassword" class="form-control" required>
+
+                                    <input type="hidden" name="_csrf_token"
+                                           value="{{ csrf_token('authenticate') }}"
+                                    >
+                                </div>
+
+                                {#
+                                    Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                                    See https://symfony.com/doc/current/security/remember_me.html
+
+                                    <div class="checkbox mb-3">
+                                        <label>
+                                            <input type="checkbox" name="_remember_me"> Remember me
+                                        </label>
+                                    </div>
+                                #}
+
+                                <button class="btn btn-lg" style="background-color:#C2A476" type="submit">
+                                    Connectez-vous !
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <br>
+                <br>
+                    <p class="required" id="required" >* Veuillez remplir tous les champs</p>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </section>
+<!-- Main Container End -->
+{% endblock %}

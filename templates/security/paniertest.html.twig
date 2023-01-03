@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <body class="inner-page">
+    <div id="page">
+    {% include'components/nav.html.twig' %}
+
+    <section class="main-container col1-layout">
+            <div class="main container">
+                <div class="col-main">
+                    <div class="cart">
+                        <div class="page-title">
+                            <h1>Votre panier</h1>
+                        </div>
+                        <div class="table-responsive">
+                            <form method="post" action="#">
+                                <fieldset>
+                                    <table class="data-table cart-table" id="shopping-cart-table">
+                                        <thead>
+                                        <tr class="first last">
+                                            <th rowspan="1">&nbsp;</th>
+                                            <th rowspan="1"><span class="nobr">Nom du produit</span></th>
+                                            <th rowspan="1" class="hidden-phone"></th>
+
+                                            <th colspan="1" class="a-center"><span class="nobr">Prix unitaire</span></th>
+                                            <th class="a-center " rowspan="1">Qté</th>
+                                            <th colspan="1" class="a-center">Prix total</th>
+                                            <th class="a-center" rowspan="1">&nbsp;</th>
+                                        </tr>
+                                        </thead>
+                                        <tfoot>
+                                        <tr class="first last">
+                                            <td class="a-right last" colspan="50"><button onclick="#" class="button btn-continue" title="Continue Shopping" type="button"><span>Continuer vos achats</span></button>
+
+
+                                        </tr>
+                                        </tfoot>
+                                        <tbody>
+                                        <tr class="first odd">
+                                            <td class="image"><a class="product-image" title="" href="#"><img width="75" height="75" alt="" src="products-images/product.jpg"></a></td>
+                                            <td><h2 class="product-name"> <a href="#"></a> </h2></td>
+                                            <td class="a-center hidden-table"><a title="Edit item parameters" class="edit-bnt" href="#"></a></td>
+
+                                            <td class="a-center hidden-table"><span class="cart-price"> <span class="price"></span> </span></td>
+                                            <td class="a-center movewishlist"><input maxlength="12" class="input-text qty" title="Qty" size="4" value="1" name=""></td>
+                                            <td class="a-center movewishlist"><span class="cart-price"> <span class="price"></span> </span></td>
+                                            <td class="a-center last"><a class="button remove-item" title="Remove item" href="#"><span><span>Supprimer l'article</span></span></a></td>
+                                        </tr>
+                                        <tr class="last even">
+                                            <td class="image"><a class="product-image" title="" href="#"><img width="75" height="75" alt="" src="products-images/product.jpg"></a></td>
+                                            <td><h2 class="product-name"> <a href="#"></a> </h2></td>
+                                            <td class="a-center hidden-table"><a title="Edit item parameters" class="edit-bnt" href="#"></a></td>
+
+                                            <td class="a-center hidden-table"><span class="cart-price"> <span class="price"></span> </span></td>
+                                            <td class="a-center movewishlist"><input maxlength="12" class="input-text qty" title="Qty" size="4" value="1" name=""></td>
+                                            <td class="a-center movewishlist"><span class="cart-price"> <span class="price"></span> </span></td>
+                                            <td class="a-center last"><a class="button remove-item" title="Remove item" href="#"><span><span>supprimer l'article</span></span></a></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </fieldset>
+                            </form>
+                        </div>
+
+
+                            <div class="col-sm-4">
+                                <div class="totals">
+                                    <h3>Shopping Cart Total</h3>
+                                    <div class="inner">
+                                        <table class="table shopping-cart-table-total" id="shopping-cart-totals-table">
+                                            <colgroup>
+                                                <col>
+                                                <col width="1">
+                                            </colgroup>
+                                            <tfoot>
+                                            <tr>
+                                                <td colspan="1" class="a-left"><strong>Grand Total</strong></td>
+                                                <td class="a-right"><strong><span class="price"></span></strong></td>
+                                            </tr>
+                                            </tfoot>
+                                            <tbody>
+                                            <tr>
+                                                <td colspan="1" class="a-left"> Subtotal </td>
+                                                <td class="a-right"><span class="price"></span></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <ul class="checkout">
+                                            <li>
+                                                <button class="button btn-proceed-checkout" title="Proceed to Checkout" type="button"><span>Proceder à l'achat</span></button>
+                                            </li>
+                                            <br>
+
+                                            <br>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--inner-->
+
+                            </div>
+                        </div>
+
+                        <!--cart-collaterals-->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+{% endblock %}

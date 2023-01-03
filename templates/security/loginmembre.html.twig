@@ -1,0 +1,51 @@
+{% extends "base.html.twig"%}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+
+    <body class="customer-account-login inner-page">
+    <div id="page">
+     {% include'components/nav.html.twig' %}
+
+    <div class="container-fluid">
+        <section class="main-container col1-layout bounceInUp animated">
+            <div class="main container col-lg-12">
+                <div class="account-login">
+                    <div class="page-title">
+                        <h1>Login</h1>
+                    </div>
+                    <fieldset class="col2-set">
+                        <legend>Login </legend>
+
+                        <div class="col-lg-6 registered-users"><strong>Registered Customers</strong>
+                            <div class="content">
+                                <p>If you have an account with us, please log in.</p>
+                                <ul class="form-list">
+
+                                        <label for="inputEmail">Email</label>
+                                        <input class="form-control form-control-lg" type="text" placeholder="">
+
+                                    <br>
+
+                                        <label for="inputPassword">Password</label>
+                                        <input type="password" name="password" id="inputPassword" class="form-control" required>
+
+                                </ul>
+                                <p class="required">* Required Fields</p>
+                                <div class="buttons-set">
+                                    <button id="send2" name="" type="submit" class="button login"><span>Login</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+        </section>
+    </div>
+{% endblock %}
